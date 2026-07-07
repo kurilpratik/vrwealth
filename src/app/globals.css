@@ -8,8 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-dm-sans);
+  --font-libre: var(--font-libre-franklin);
+  --color-primary: #6761a4;
+  --color-primary-hover: #46407b;
+  --color-primary-light: #d9d7e8;
+  --color-primary-dark: #121221;
+  --color-secondary: #d55852;
+  --color-accent: #7abe75;
 }
 
 /* 
@@ -22,8 +28,15 @@ Default dark mode not needed since we are using Tailwind's dark mode feature. If
 }
 */
 
+html {
+  font-family: var(--font-sans);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: var(--font-libre);
 }
