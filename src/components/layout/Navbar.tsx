@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm shadow-slate-200 backdrop-blur-md">
-      <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 md:max-w-7xl lg:px-0">
+      <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 md:mx-20 md:max-w-7xl lg:mx-auto">
         <Logo size="md" />
 
         <nav className="text-md hidden items-center gap-8 font-medium text-neutral-600 md:flex">
