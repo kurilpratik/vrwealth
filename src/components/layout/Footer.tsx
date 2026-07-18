@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import Newsletter from "./Newsletter";
 
 import { services, contact } from "@/src/data/footerData";
@@ -24,13 +24,13 @@ const Footer = () => {
               </h3>
               <ul className="flex flex-col gap-3">
                 {services.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
                       className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
                     >
-                      {item}
-                    </a>
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -41,12 +41,12 @@ const Footer = () => {
               <ul className="flex flex-col gap-3">
                 {contact.map((item) => (
                   <li key={item.label}>
-                    <a
+                    <Link
                       href={item.href}
                       className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

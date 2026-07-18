@@ -1,7 +1,12 @@
+import PageLoader from "@/src/components/PageLoader";
 import React from "react";
 
 const page = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <PageLoader />
+    </div>
+  );
 };
 
 export default page;

@@ -1,10 +1,28 @@
 export const services = [
-  "Financial Planning",
-  "Investment Advisory",
-  "Wealth Management",
-  "Retirement Planning",
-  "Insurance Planning",
-  "Tax Planning",
+  {
+    name: "Financial Planning",
+    href: "/service",
+  },
+  {
+    name: "Investment Advisory",
+    href: "/service",
+  },
+  {
+    name: "Wealth Management",
+    href: "/service",
+  },
+  {
+    name: "Retirement Planning",
+    href: "/service",
+  },
+  {
+    name: "Insurance Planning",
+    href: "/service",
+  },
+  {
+    name: "Tax Planning",
+    href: "/service",
+  },
 ];
 
 export const contact = [
