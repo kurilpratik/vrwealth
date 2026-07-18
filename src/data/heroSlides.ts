@@ -1,5 +1,5 @@
 export const heroSlides = [
-  { src: "/images/hero-img.png", alt: "VR Wealth" },
-  { src: "/images/hero-img.png", alt: "VR Wealth planning" },
-  { src: "/images/hero-img.png", alt: "VR Wealth growth" },
+  { src: "/images/hero/h1.JPG", alt: "VR Wealth" },
+  { src: "/images/hero/h2.jpg", alt: "VR Wealth planning" },
+  { src: "/images/hero/h3.JPG", alt: "VR Wealth growth" },
 ];

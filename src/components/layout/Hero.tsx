@@ -60,7 +60,7 @@ const Hero = () => {
             alt="Decorative Image"
             className="absolute right-50 -bottom-10 z-10 scale-55 lg:scale-95"
           />
-          <div className="relative h-100 w-100 overflow-hidden sm:h-105 sm:w-105 lg:h-140 lg:w-140">
+          <div className="relative h-84 w-103 overflow-hidden sm:h-90 sm:w-105 lg:h-140 lg:w-140">
             <AnimatePresence mode="wait">
               <motion.div
                 key={heroSlides[currentIndex].alt}
@@ -72,10 +72,10 @@ const Hero = () => {
               >
                 <Image
                   src={heroSlides[currentIndex].src}
-                  height={750}
+                  height={550}
                   width={950}
                   alt={heroSlides[currentIndex].alt}
-                  className="h-full w-full scale-90 object-contain lg:scale-100"
+                  className="h-full w-full scale-90 object-cover lg:scale-100"
                 />
               </motion.div>
             </AnimatePresence>

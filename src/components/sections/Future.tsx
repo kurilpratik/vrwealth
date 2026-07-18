@@ -24,7 +24,7 @@ const Future = () => {
         {/* Right: Image */}
         <div className="relative h-100 w-full overflow-hidden md:h-120">
           <Image
-            src="/images/future.png"
+            src="/images/future.jpg"
             alt="Financial consultant overlooking the city"
             fill
             className="object-cover"
