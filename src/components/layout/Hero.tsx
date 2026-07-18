@@ -44,6 +44,7 @@ const Hero = () => {
             height={450}
             width={450}
             alt="Decorative Image"
+            loading="lazy"
             className="absolute -top-10 -right-45 z-10 scale-40 lg:-right-70 lg:scale-80"
           />
           <Image
@@ -51,6 +52,7 @@ const Hero = () => {
             height={150}
             width={150}
             alt="Decorative Image"
+            loading="lazy"
             className="absolute bottom-15 -left-20 z-10 scale-65 lg:scale-100"
           />
           <Image
@@ -58,6 +60,7 @@ const Hero = () => {
             height={250}
             width={250}
             alt="Decorative Image"
+            loading="lazy"
             className="absolute right-50 -bottom-10 z-10 scale-55 lg:scale-95"
           />
           <div className="relative h-84 w-103 overflow-hidden sm:h-90 sm:w-105 lg:h-140 lg:w-140">
@@ -75,6 +78,9 @@ const Hero = () => {
                   height={550}
                   width={950}
                   alt={heroSlides[currentIndex].alt}
+                  priority
+                  quality={85}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 50vw"
                   className="h-full w-full scale-90 object-cover lg:scale-100"
                 />
               </motion.div>

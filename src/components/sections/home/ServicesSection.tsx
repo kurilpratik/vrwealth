@@ -5,7 +5,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="mx-auto max-w-max px-4 py-20 sm:max-w-7xl sm:px-0 sm:py-40"
+      className="py-20s mx-auto max-w-max px-4 sm:max-w-7xl sm:px-0 sm:py-40"
     >
       <p className="small-heading">What we offer</p>
       <h3 className="heading">We can help you with each one of these</h3>
