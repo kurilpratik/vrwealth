@@ -5,7 +5,7 @@ import { useState } from "react";
 const Newsletter = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert("Subscribed");
     setEmail("");
