@@ -8,7 +8,7 @@ const Badge = () => {
       />
       <div>
         <h3 className="font-extrabold uppercase">Top in Delhi NCR</h3>
-        <p className="text-sm leading-4">Investment Firms</p>
+        <p className="text-sm leading-4 text-white">Trading Firms</p>
       </div>
     </div>
   );

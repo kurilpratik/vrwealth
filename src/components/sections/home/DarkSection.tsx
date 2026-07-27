@@ -3,6 +3,8 @@ import Pill from "../../ui/pill";
 import FeatureCard from "../../layout/FeatureCard";
 import Image from "next/image";
 
+import { MarketTicker } from "../../MarketTicker";
+
 const DarkSection = () => {
   const pills = [
     "Financial Planning",
@@ -11,7 +13,7 @@ const DarkSection = () => {
     "Tax Planning",
   ];
   return (
-    <section className="bg-primary-dark mt-70 min-h-screen w-full text-white sm:mt-50">
+    <section className="bg-primary-dark min-h-screen w-full text-white">
       <div className="mx-auto flex max-w-max flex-col-reverse justify-between px-4 py-20 pl-4 sm:max-w-7xl sm:flex-row sm:px-0 sm:py-48 sm:pl-0">
         <div className="max-w-md pt-20 sm:pt-0">
           {pills.map((pill, index) => (
@@ -37,7 +39,7 @@ const DarkSection = () => {
       </div>
       <div className="mx-auto max-w-7xl px-4 pt-6 pb-42 sm:px-0 sm:pt-16">
         <h5 className="py-12 text-center font-semibold">
-          Comprehensive care fot
+          Comprehensive care for
           <br />
           lasting solutions
         </h5>
@@ -64,7 +66,7 @@ const DarkSection = () => {
           {/* Right: image */}
           <div className="relative h-full min-h-60 lg:col-span-2">
             <Image
-              src="/images/feature-house.jpg"
+              src="/images/img1.jpg"
               alt="House model and keys"
               className="h-full w-full bg-center object-cover"
               height={200}
@@ -73,6 +75,7 @@ const DarkSection = () => {
           </div>
         </div>
       </div>
+      <MarketTicker variant="dark" />
     </section>
   );
 };

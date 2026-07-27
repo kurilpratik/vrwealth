@@ -62,9 +62,37 @@ const TestimonialSection = () => {
 
   return (
     <section>
+      {/* FIXED IMG QUOTE  */}
+      <div className="relative isolate overflow-hidden bg-slate-950">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/quote-bg.jpg"
+            alt="Trading and finance background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-slate-950/70" />
+        </div>
+
+        <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-6 py-24 text-center sm:px-8 lg:px-12">
+          <div className="max-w-4xl">
+            <p className="mx-auto mb-4 text-sm font-semibold tracking-[0.35em] text-slate-300 uppercase">
+              Market Insight
+            </p>
+            <blockquote className="text-3xl leading-tight font-semibold text-white sm:text-4xl lg:text-5xl">
+              “The strongest portfolios are built with discipline, patience, and
+              a long-term view of opportunity.”
+            </blockquote>
+            <p className="small-heading mx-auto mt-6">— VR Wealth Creation</p>
+          </div>
+        </div>
+      </div>
+
       <div className="pt-32 sm:mx-auto sm:max-w-7xl">
         <p className="small-heading text-center sm:max-w-7xl">Our Clients</p>
-        <h3 className="heading mb-24 text-center">
+        <h3 className="heading mb-8 text-center">
           Tailored Financial
           <br />
           Solutions for Every Client
@@ -72,7 +100,7 @@ const TestimonialSection = () => {
       </div>
 
       <div className="relative w-full sm:overflow-hidden">
-        <motion.div
+        {/* <motion.div
           className="flex overflow-x-scroll sm:overflow-x-visible"
           style={{ width: `${testimonials.length}` }}
           animate={
@@ -109,12 +137,12 @@ const TestimonialSection = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* FIGURES  */}
         <div
           ref={figuresRef}
-          className="figures mx-auto max-w-3xl py-16 sm:py-32"
+          className="figures mx-auto max-w-3xl py-8 sm:py-20"
         >
           <div className="mx-auto flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
             <div className="text-center">

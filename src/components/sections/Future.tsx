@@ -3,10 +3,10 @@ import Button from "../ui/Button";
 
 const Future = () => {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+    <section className="mx-auto sm:pl-6">
       <div className="grid items-center gap-12 md:grid-cols-2">
         {/* Left: Text content */}
-        <div className="flex flex-col gap-6">
+        <div className="mx-auto flex max-w-2xl flex-col gap-6 px-6 py-12 sm:py-40">
           <h3 className="heading">
             Build a better future with the <br /> right investments
           </h3>
@@ -22,7 +22,7 @@ const Future = () => {
           </div>
         </div>
         {/* Right: Image */}
-        <div className="relative h-100 w-full overflow-hidden md:h-120">
+        <div className="relative h-140 w-full overflow-hidden sm:h-full">
           <Image
             src="/images/future.jpg"
             alt="Financial consultant overlooking the city"

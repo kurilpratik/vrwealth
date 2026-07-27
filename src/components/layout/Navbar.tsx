@@ -103,7 +103,7 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 md:mx-20 md:max-w-7xl lg:mx-auto">
-        <Logo size="md" mode="dark" />
+        <Logo size="md" />
 
         <nav className="text-md hidden items-center gap-8 font-medium text-neutral-600 md:flex">
           {NavbarData.map((item) => {
@@ -164,7 +164,7 @@ const Navbar = () => {
           onClick={(event) => event.stopPropagation()}
         >
           <div className="flex items-center justify-between">
-            <Logo size="md" mode="dark" />
+            <Logo size="md" />
             <button
               type="button"
               aria-label="Close navigation menu"
@@ -188,7 +188,7 @@ const Navbar = () => {
                     closeMobileMenu();
                   }}
                   aria-current={isActive ? "page" : undefined}
-                  className={`rounded-lg px-3 py-3 text-lg font-semibold transition ${
+                  className={`small-heading rounded-lg px-3 py-3 text-lg font-semibold transition ${
                     isActive
                       ? "bg-primary/10 text-primary"
                       : "hover:text-primary text-neutral-700 hover:bg-neutral-100"

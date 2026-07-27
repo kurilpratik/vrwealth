@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="mx-auto flex max-w-7xl flex-col gap-12 md:flex-row md:justify-between">
           {/* Logo */}
           <div>
-            <Logo />
+            <Logo mode="dark" />
           </div>
 
           {/* Link columns */}

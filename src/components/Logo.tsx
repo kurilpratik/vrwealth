@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type size = "sm" | "md" | "lg" | "xl";
@@ -17,10 +18,20 @@ interface logoProps {
 const Logo = ({ size = "xl", mode = "light" }: logoProps) => {
   return (
     <Link href={"/"}>
-      <h4 className={`font-libre ${sizeClasses[size]} font-bold italic`}>
+      {/* <h4 className={`font-libre ${sizeClasses[size]} font-bold italic`}>
         <span className="text-primary font-extrabold not-italic">VR</span>
         <span className={mode === "light" ? "text-white" : ""}>Wealth</span>
-      </h4>
+      </h4> */}
+      <Image
+        src={
+          mode === "dark"
+            ? "/images/logo-horizontal-dark.png"
+            : "/images/logo-horizontal.png"
+        }
+        height={32}
+        width={140}
+        alt="VR Wealth Creations"
+      />
     </Link>
   );
 };
