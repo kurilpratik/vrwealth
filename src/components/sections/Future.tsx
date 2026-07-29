@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Button from "../ui/Button";
 
-const Future = () => {
+type FutureProps = {
+  imageUrl?: string;
+};
+
+const Future = ({ imageUrl = "/images/future.jpg" }: FutureProps) => {
   return (
     <section className="mx-auto sm:pl-6">
       <div className="grid items-center gap-12 md:grid-cols-2">
@@ -18,13 +22,13 @@ const Future = () => {
           </p>
 
           <div>
-            <Button path="" />
+            <Button path="https://calendar.app.google/VAPZhD35wPEbvCjm6" />
           </div>
         </div>
         {/* Right: Image */}
         <div className="relative h-140 w-full overflow-hidden sm:h-full">
           <Image
-            src="/images/future.jpg"
+            src={imageUrl}
             alt="Financial consultant overlooking the city"
             fill
             className="object-cover"

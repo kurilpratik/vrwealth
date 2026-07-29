@@ -1,5 +1,5 @@
 type ButtonProps = {
-  path: string;
+  path?: string;
   label?: string;
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
@@ -18,7 +18,7 @@ const variantClasses = {
 };
 
 const Button = ({
-  path,
+  path = "https://calendar.app.google/VAPZhD35wPEbvCjm6",
   label = "Book Consultation",
   variant = "primary",
   size = "md",

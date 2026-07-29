@@ -11,7 +11,7 @@ const Newsletter = () => {
     setEmail("");
   };
   return (
-    <section className="bg-secondary px-6 py-10 md:px-16">
+    <section className="bg-primary px-6 py-10 md:px-16">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
         <h2 className="heading max-w-sm text-white">
           Stay in touch with us with our valuable newsletters

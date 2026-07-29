@@ -6,7 +6,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "VRWealth",
+  title: "VR Wealth Creation",
   description: "Investment Management",
 };
 
