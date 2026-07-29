@@ -4,6 +4,7 @@ import SubHero from "@/src/components/layout/SubHero";
 import ContactFaqSection from "@/src/components/sections/contact/ContactFaqSection";
 import ContactInfoSection from "@/src/components/sections/contact/ContactInfoSection";
 import Future from "@/src/components/sections/Future";
+import ScrollReveal from "@/src/components/ui/ScrollReveal";
 
 const page = () => {
   return (
@@ -16,16 +17,20 @@ const page = () => {
       <ContactForm />
 
       <section className="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:flex-row sm:gap-10 sm:px-0">
-        <ClienteleCard
-          title="Noida Office"
-          description="20th Floor, Galaxy blue sapphire plaza, Extension, Greater Noida W Rd, Sector 4, Noida, Uttar Pradesh 201309"
-          image="/images/contact/office/noida.webp"
-        />
-        <ClienteleCard
-          title="Lucknow Office"
-          description="10th Floor, Regus, Kathauta Chauraha Rd, Vijaipur Colony, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226016"
-          image="/images/contact/office/lucknow.jpg"
-        />
+        <ScrollReveal className="w-full" delay={0.05}>
+          <ClienteleCard
+            title="Noida Office"
+            description="20th Floor, Galaxy blue sapphire plaza, Extension, Greater Noida W Rd, Sector 4, Noida, Uttar Pradesh 201309"
+            image="/images/contact/office/noida.webp"
+          />
+        </ScrollReveal>
+        <ScrollReveal className="w-full" delay={0.12}>
+          <ClienteleCard
+            title="Lucknow Office"
+            description="10th Floor, Regus, Kathauta Chauraha Rd, Vijaipur Colony, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226016"
+            image="/images/contact/office/lucknow.jpg"
+          />
+        </ScrollReveal>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-0 sm:py-0">

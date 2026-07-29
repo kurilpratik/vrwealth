@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../ui/Button";
+import ScrollReveal from "../ui/ScrollReveal";
 
 interface SubHeroProps {
   title: string;
@@ -11,7 +12,7 @@ const SubHero = ({ title, description, image }: SubHeroProps) => {
   return (
     <section className="bg-white">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-8 sm:px-6 sm:py-16 lg:grid-cols-2 lg:px-8">
-        <div className="max-w-2xl py-4 sm:py-16">
+        <ScrollReveal className="max-w-2xl py-4 sm:py-16" direction="right">
           <h1 className="font-libre mb-4 text-3xl font-semibold text-neutral-900 sm:text-4xl lg:text-5xl">
             {title}
           </h1>
@@ -19,9 +20,13 @@ const SubHero = ({ title, description, image }: SubHeroProps) => {
             {description}
           </p>
           <Button />
-        </div>
+        </ScrollReveal>
 
-        <div className="h-full overflow-hidden shadow-xl">
+        <ScrollReveal
+          className="h-full overflow-hidden shadow-xl"
+          delay={0.1}
+          direction="left"
+        >
           <Image
             src={image}
             alt={title}
@@ -30,7 +35,7 @@ const SubHero = ({ title, description, image }: SubHeroProps) => {
             priority
             className="h-full w-full object-cover"
           />
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

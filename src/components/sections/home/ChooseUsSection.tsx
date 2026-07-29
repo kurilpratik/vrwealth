@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import ScrollReveal from "../../ui/ScrollReveal";
 
 const cardBaseClass =
   "overflow-hidden rounded-2xl bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 ease-out sm:p-10";
@@ -45,7 +46,7 @@ const ChooseUsSection = () => {
   return (
     <section className="bg-primary-light min-h-screen w-full">
       <div className="mx-auto mt-20 flex flex-col gap-0 px-4 py-20 sm:max-w-7xl sm:flex-row sm:gap-40 sm:px-0">
-        <div className="left max-w-2xl">
+        <ScrollReveal className="left max-w-2xl">
           <p className="small-heading">Why Choose Us</p>
           <h3 className="heading">
             Maximize your wealth with strategic investments
@@ -53,7 +54,7 @@ const ChooseUsSection = () => {
           <p className="py-6 text-sm font-semibold">
             Flexibility. Expert Advisors. User Experience.
           </p>
-        </div>
+        </ScrollReveal>
         <div className="right mt-10 w-full sm:min-w-[32rem]">
           <div ref={rightRef} className="relative w-full sm:min-h-140">
             {features.map((feature, index) => (
@@ -61,11 +62,12 @@ const ChooseUsSection = () => {
                 key={feature.title}
                 layout
                 initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{
                   duration: 0.55,
-                  delay: index * 0.12,
-                  ease: "easeOut",
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className={`${cardBaseClass} absolute right-0 left-0 ${
                   index === 0

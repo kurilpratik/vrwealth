@@ -1,4 +1,3 @@
-import { MarketTicker } from "../components/MarketTicker";
 import Future from "../components/sections/Future";
 import DarkSection from "../components/sections/home/DarkSection";
 import ServicesSection from "../components/sections/home/ServicesSection";

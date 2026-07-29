@@ -2,33 +2,41 @@ import Image from "next/image";
 
 import { teamData } from "@/src/data/teamData";
 import Figures from "../../layout/Figures";
+import ScrollReveal from "../../ui/ScrollReveal";
 
 const TeamSection = () => {
   return (
     <section className="px-4 py-24 sm:mx-auto sm:max-w-7xl sm:px-0">
-      <h3 className="py-10 text-center">
-        Meet the team that backs the vision and agility of VR Wealth Creation
-      </h3>
-      <div className="relative">
-        <Image
-          src={"/images/about/team.png"}
-          height={200}
-          width={1920}
-          quality={100}
-          alt="VR Wealth Creations Team"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-white to-transparent"
-        />
-      </div>
+      <ScrollReveal>
+        <h3 className="py-10 text-center">
+          Meet the team that backs the vision and agility of VR Wealth Creation
+        </h3>
+      </ScrollReveal>
+      <ScrollReveal delay={0.1}>
+        <div className="relative">
+          <Image
+            src={"/images/about/team.png"}
+            height={200}
+            width={1920}
+            quality={100}
+            alt="VR Wealth Creations Team"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-white to-transparent"
+          />
+        </div>
+      </ScrollReveal>
 
       <Figures />
 
       <div className="grid grid-cols-2 gap-4 py-10 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
         {teamData.map((member, index) => (
-          <article
+          <ScrollReveal
             key={`${member.name}-${index}`}
+            as="article"
+            delay={index * 0.06}
+            amount={0.1}
             className="overflow-hidden bg-[#F1F1F1] transition-colors duration-300 hover:bg-white"
           >
             <div className="relative aspect-3/4 overflow-hidden">
@@ -47,7 +55,7 @@ const TeamSection = () => {
               </h4>
               <p className="small-heading mt-1 text-sm">{member.role}</p>
             </div>
-          </article>
+          </ScrollReveal>
         ))}
       </div>
     </section>

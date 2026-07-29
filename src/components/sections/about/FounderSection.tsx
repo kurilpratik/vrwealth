@@ -1,19 +1,24 @@
 import Image from "next/image";
 
+import ScrollReveal from "../../ui/ScrollReveal";
+
 const FounderSection = () => {
   return (
     <section className="mx-auto max-w-7xl px-4 py-24 sm:px-0">
-      <div className="mb-12 text-center lg:mb-16">
+      <ScrollReveal className="mb-12 text-center lg:mb-16">
         <p className="small-heading text-primary mx-auto">Our Founder</p>
         <h2 className="heading text-3xl font-semibold sm:text-4xl lg:text-5xl">
           Meet Our Visionary Founder & CEO
           <br />
           <span className="text-primary">Dr. Varnika Tiwari</span>
         </h2>
-      </div>
+      </ScrollReveal>
 
       <div className="grid gap-4 lg:grid-cols-[0.9fr_1.2fr_0.9fr] lg:grid-rows-[auto_auto]">
-        <div className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-1 lg:row-start-1">
+        <ScrollReveal
+          className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-1 lg:row-start-1"
+          delay={0.05}
+        >
           {/* <p className="text-sm font-semibold tracking-[0.2em] text-neutral-500 uppercase">
             Experience
           </p> */}
@@ -28,9 +33,13 @@ const FounderSection = () => {
           <p className="mt-4 text-xl font-semibold">
             7 years of experience in investing & wealth management
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-[#F1F1F1] hover:bg-white lg:col-start-2 lg:row-span-2 lg:row-start-1">
+        <ScrollReveal
+          className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-[#F1F1F1] hover:bg-white lg:col-start-2 lg:row-span-2 lg:row-start-1"
+          delay={0.1}
+          amount={0.15}
+        >
           <div className="text-primary absolute top-6 right-6 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg">
             <span className="text-3xl font-black">+</span>
           </div>
@@ -43,9 +52,12 @@ const FounderSection = () => {
               fill
             />
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-3 lg:row-start-1">
+        <ScrollReveal
+          className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-3 lg:row-start-1"
+          delay={0.15}
+        >
           <p className="small-heading text-sm">Academic Credentials</p>
           <ul className="mt-4 list-disc space-y-3 pl-4 text-sm text-slate-700 sm:text-base">
             <li>
@@ -61,9 +73,12 @@ const FounderSection = () => {
               and Management.
             </li>
           </ul>
-        </div>
+        </ScrollReveal>
 
-        <div className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-1 lg:row-start-2">
+        <ScrollReveal
+          className="rounded-3xl bg-[#F1F1F1] p-8 hover:bg-white lg:col-start-1 lg:row-start-2"
+          delay={0.2}
+        >
           <p className="small-heading text-sm">
             Certifications & Accreditations
           </p>
@@ -89,9 +104,12 @@ const FounderSection = () => {
               strategic financial insights and consulting.
             </li>
           </ul>
-        </div>
+        </ScrollReveal>
 
-        <div className="rounded-3xl bg-[#F1F1F1] p-8 shadow-[0_10px_40px_rgba(15,23,42,0.08)] hover:bg-white lg:col-start-3 lg:row-start-2">
+        <ScrollReveal
+          className="rounded-3xl bg-[#F1F1F1] p-8 shadow-[0_10px_40px_rgba(15,23,42,0.08)] hover:bg-white lg:col-start-3 lg:row-start-2"
+          delay={0.25}
+        >
           <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg"></p>
           <Image
             src={"/images/wallet.svg"}
@@ -104,7 +122,7 @@ const FounderSection = () => {
           <p className="mt-4 text-xl font-semibold">
             ETFs, NASDAQ, NYSE, forex, derivatives.
           </p>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

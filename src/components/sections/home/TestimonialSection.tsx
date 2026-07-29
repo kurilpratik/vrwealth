@@ -6,6 +6,7 @@ import Image from "next/image";
 import { testimonials, clientele } from "@/src/data/testimonialData";
 import Figures from "../../layout/Figures";
 import ClienteleCard from "../../layout/ClienteleCard";
+import ScrollReveal from "../../ui/ScrollReveal";
 
 const TestimonialSection = () => {
   const [index, setIndex] = useState(0);
@@ -51,7 +52,7 @@ const TestimonialSection = () => {
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-6 py-24 text-center sm:px-8 lg:px-12">
-          <div className="max-w-4xl">
+          <ScrollReveal className="max-w-4xl">
             <p className="mx-auto mb-4 text-sm font-semibold tracking-[0.35em] text-slate-300 uppercase">
               Market Insight
             </p>
@@ -60,18 +61,18 @@ const TestimonialSection = () => {
               a long-term view of opportunity.”
             </blockquote>
             <p className="small-heading mx-auto mt-6">— VR Wealth Creation</p>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
 
-      <div className="pt-32 sm:mx-auto sm:max-w-7xl">
+      <ScrollReveal className="pt-32 sm:mx-auto sm:max-w-7xl">
         <p className="small-heading text-center sm:max-w-7xl">Our Clients</p>
         <h3 className="heading mb-8 text-center">
           Tailored Financial
           <br />
           Solutions for Every Client
         </h3>
-      </div>
+      </ScrollReveal>
 
       <div className="relative w-full sm:overflow-hidden">
         {/* <motion.div
@@ -119,12 +120,13 @@ const TestimonialSection = () => {
       <div className="clientele w-full py-6">
         <div className="flex flex-col gap-4 px-4 sm:flex-row sm:gap-8 sm:px-0">
           {clientele.map((item, i) => (
-            <ClienteleCard
-              key={i}
-              title={item.title}
-              description={item.description}
-              image={item.image}
-            />
+            <ScrollReveal key={i} className="w-full" delay={i * 0.1} amount={0.15}>
+              <ClienteleCard
+                title={item.title}
+                description={item.description}
+                image={item.image}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </div>

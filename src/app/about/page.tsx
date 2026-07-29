@@ -5,6 +5,7 @@ import SubHero from "@/src/components/layout/SubHero";
 import FounderSection from "@/src/components/sections/about/FounderSection";
 import TeamSection from "@/src/components/sections/about/TeamSection";
 import Future from "@/src/components/sections/Future";
+import ScrollReveal from "@/src/components/ui/ScrollReveal";
 
 const articles = [
   {
@@ -67,18 +68,22 @@ const page = () => {
       {/* STARTING CARDS */}
       <section className="mx-auto px-4 py-20 sm:max-w-7xl sm:px-0">
         <div className="flex flex-wrap justify-center gap-6 lg:justify-between">
-          {articles.map((article) => (
-            <ArticleCard
-              key={article.title}
-              title={article.title}
-              icon={article.icon}
-              alt={article.alt}
-            />
+          {articles.map((article, index) => (
+            <ScrollReveal key={article.title} delay={index * 0.1} amount={0.15}>
+              <ArticleCard
+                title={article.title}
+                icon={article.icon}
+                alt={article.alt}
+              />
+            </ScrollReveal>
           ))}
         </div>
       </section>
       {/* About Us */}
-      <section className="mx-auto px-4 py-24 sm:max-w-2xl sm:py-42">
+      <ScrollReveal
+        as="section"
+        className="mx-auto px-4 py-24 sm:max-w-2xl sm:py-42"
+      >
         <h3 className="heading">
           We are <span className="text-primary font-black">VR</span>
           <span className="font-bold italic">Wealth </span>
@@ -102,69 +107,85 @@ const page = () => {
           Additionally, we have successfully navigated opportunities in
           derivatives, futures, options, and exchange-traded funds (ETFs), which
           derive their value from underlying assets such as stocks, commodities,
-          or currencies.
+          or           currencies.
         </p>
-      </section>
+      </ScrollReveal>
       <FounderSection />
       <TeamSection />
       {/* CLIENT  */}
       <section className="mx-auto px-4 sm:max-w-7xl sm:px-0">
-        <h3 className="heading text-center">
-          Our Client Base is Across
-          <br />
-          the World
-        </h3>
-        <img
-          src="/images/world.png"
-          alt="VR Wealth Creation Client Base"
-          className="py-12 sm:px-36"
-        />
-        <div className="py-8 text-center">
-          {countries.map((country, index) => (
-            <p className="inline pr-6 hover:font-semibold">
-              {countries[index]}
-            </p>
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-center py-4">
-          {cities.map((city, index) => (
-            <p className="pr-6 hover:font-semibold">{cities[index]}</p>
-          ))}
-        </div>
+        <ScrollReveal>
+          <h3 className="heading text-center">
+            Our Client Base is Across
+            <br />
+            the World
+          </h3>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <img
+            src="/images/world.png"
+            alt="VR Wealth Creation Client Base"
+            className="py-12 sm:px-36"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay={0.15}>
+          <div className="py-8 text-center">
+            {countries.map((country, index) => (
+              <p key={country} className="inline pr-6 hover:font-semibold">
+                {countries[index]}
+              </p>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center py-4">
+            {cities.map((city, index) => (
+              <p key={city} className="pr-6 hover:font-semibold">
+                {cities[index]}
+              </p>
+            ))}
+          </div>
+        </ScrollReveal>
       </section>
 
       <div className="mx-auto px-4 py-24 sm:max-w-7xl sm:px-0 sm:py-32">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-3">
-          <Image
-            src="/images/about/gallery/5.png"
-            alt="VR Wealth Creation Team"
-            width={1000}
-            height={1000}
-            className="row-span-1 h-48 object-cover sm:h-96"
-          />
-          <Image
-            src="/images/about/gallery/6.png"
-            alt="VR Wealth Creation Team"
-            width={1000}
-            height={1000}
-            className="h-48 w-full object-cover sm:col-span-2 sm:h-96"
-          />
+          <ScrollReveal className="row-span-1" amount={0.15}>
+            <Image
+              src="/images/about/gallery/5.png"
+              alt="VR Wealth Creation Team"
+              width={1000}
+              height={1000}
+              className="h-48 object-cover sm:h-96"
+            />
+          </ScrollReveal>
+          <ScrollReveal className="sm:col-span-2" delay={0.08} amount={0.15}>
+            <Image
+              src="/images/about/gallery/6.png"
+              alt="VR Wealth Creation Team"
+              width={1000}
+              height={1000}
+              className="h-48 w-full object-cover sm:h-96"
+            />
+          </ScrollReveal>
         </div>
         <div className="grid grid-cols-1 gap-12 pt-4 sm:grid-cols-3">
-          <Image
-            src="/images/about/gallery/8.png"
-            alt="VR Wealth Creation Team"
-            width={1000}
-            height={1000}
-            className="h-48 object-cover sm:col-span-2 sm:h-96"
-          />
-          <Image
-            src="/images/about/gallery/4.png"
-            alt="VR Wealth Creation Team"
-            width={1000}
-            height={1000}
-            className="h-48 w-full object-cover sm:h-96"
-          />
+          <ScrollReveal className="sm:col-span-2" delay={0.12} amount={0.15}>
+            <Image
+              src="/images/about/gallery/8.png"
+              alt="VR Wealth Creation Team"
+              width={1000}
+              height={1000}
+              className="h-48 object-cover sm:h-96"
+            />
+          </ScrollReveal>
+          <ScrollReveal delay={0.16} amount={0.15}>
+            <Image
+              src="/images/about/gallery/4.png"
+              alt="VR Wealth Creation Team"
+              width={1000}
+              height={1000}
+              className="h-48 w-full object-cover sm:h-96"
+            />
+          </ScrollReveal>
         </div>
       </div>
       <Future imageUrl="/images/future/2.jpg" />

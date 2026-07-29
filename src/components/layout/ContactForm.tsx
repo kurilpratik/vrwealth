@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import ScrollReveal from "../ui/ScrollReveal";
+
 const fieldClassName =
   "w-full rounded-xl border border-white/15 bg-slate-950/60 px-4 pt-8 pb-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-primary/50 focus:ring-1 focus:ring-primary/30";
 
@@ -46,11 +48,14 @@ const ContactForm = () => {
   return (
     <section className="sm: mx-auto max-w-7xl px-4 py-24 sm:px-0 sm:py-42">
       <div className="max-w-3xl">
-        <h2 className="heading mx-auto mb-10 max-w-xl text-2xl text-slate-900 sm:text-3xl">
-          Reach out to us with a specific query or directly book a consultation
-        </h2>
+        <ScrollReveal>
+          <h2 className="heading mx-auto mb-10 max-w-xl text-2xl text-slate-900 sm:text-3xl">
+            Reach out to us with a specific query or directly book a consultation
+          </h2>
+        </ScrollReveal>
 
-        <form
+        <ScrollReveal delay={0.1}>
+          <form
           onSubmit={handleSubmit}
           className="ring-primary/40 bg-primary-dark rounded-xl border border-white/10 p-6 shadow-[0_40px_120px_rgba(15,23,42,0.35)] ring-1 sm:p-8 md:p-10"
         >
@@ -151,6 +156,7 @@ const ContactForm = () => {
             </button>
           </div>
         </form>
+        </ScrollReveal>
       </div>
     </section>
   );

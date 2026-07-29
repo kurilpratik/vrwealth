@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import ScrollReveal from "../../ui/ScrollReveal";
 
 const faqItems = [
   {
@@ -41,7 +42,7 @@ const FAQsSection = () => {
   return (
     <section className="bg-slate-950 text-white">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <ScrollReveal className="mx-auto max-w-3xl text-center">
           <p className="small-heading mx-auto">Frequently Asked Questions</p>
           <h2 className="heading">
             Everything you need to know about our growth and services
@@ -51,9 +52,10 @@ const FAQsSection = () => {
             portfolio strategies, and client support with clarity and
             confidence.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="mt-14 space-y-4 rounded-3xl border border-white/10 bg-slate-900/80 p-2 shadow-[0_40px_120px_rgba(15,23,42,0.35)] sm:p-4">
+        <ScrollReveal delay={0.1}>
+          <div className="mt-14 space-y-4 rounded-3xl border border-white/10 bg-slate-900/80 p-2 shadow-[0_40px_120px_rgba(15,23,42,0.35)] sm:p-4">
           {faqItems.map((item, index) => {
             const isActive = activeIndex === index;
 
@@ -94,7 +96,8 @@ const FAQsSection = () => {
               </div>
             );
           })}
-        </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

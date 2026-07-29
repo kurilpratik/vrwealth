@@ -1,8 +1,14 @@
 import Image from "next/image";
 
+import ScrollReveal from "../../ui/ScrollReveal";
+
 const ContactInfoSection = () => {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-4 pb-24 sm:max-w-md sm:pb-42">
+    <ScrollReveal
+      className="flex w-full max-w-sm flex-col gap-4 pb-24 sm:max-w-md sm:pb-42"
+      direction="left"
+      delay={0.1}
+    >
       <div className="rounded-xl bg-[#f2f2f2] px-7 py-8 sm:px-8 sm:py-9">
         <div>
           <span className="mb-2 block text-xs font-bold tracking-[0.08em] text-black uppercase">
@@ -48,7 +54,7 @@ const ContactInfoSection = () => {
           className="object-cover"
         />
       </div>
-    </div>
+    </ScrollReveal>
   );
 };
 

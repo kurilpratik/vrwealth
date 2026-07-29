@@ -4,6 +4,7 @@ import { faqs } from "@/src/data/faqsData";
 import { AnimatePresence, motion } from "motion/react";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
+import ScrollReveal from "../../ui/ScrollReveal";
 
 const ContactFaqSection = () => {
   const [openIndexes, setOpenIndexes] = useState<number[]>([0, 1]);
@@ -15,7 +16,7 @@ const ContactFaqSection = () => {
   };
 
   return (
-    <div className="ml-auto w-full max-w-3xl py-4 pb-28 sm:py-42 sm:pb-0">
+    <ScrollReveal className="ml-auto w-full max-w-3xl py-4 pb-28 sm:py-42 sm:pb-0">
       <h2 className="heading text-primary mb-10">Frequently Asked Questions</h2>
 
       <div className="divide-y divide-neutral-200 border-y border-neutral-200">
@@ -62,7 +63,7 @@ const ContactFaqSection = () => {
           );
         })}
       </div>
-    </div>
+    </ScrollReveal>
   );
 };
 

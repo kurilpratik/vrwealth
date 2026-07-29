@@ -49,7 +49,12 @@ const Hero = () => {
 
       <div className="relative z-10 flex min-h-screen flex-col justify-between px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-7xl flex-1 items-start pt-32">
-          <div className="max-w-2xl text-white">
+          <motion.div
+            className="max-w-2xl text-white"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <Badge />
             <h1 className="font-libre mb-4 text-4xl leading-tight font-semibold md:text-6xl lg:text-7xl">
               Build Wealth with Confidence
@@ -62,10 +67,15 @@ const Hero = () => {
               path="https://calendar.app.google/VAPZhD35wPEbvCjm6"
               target="_blank"
             />
-          </div>
+          </motion.div>
         </div>
 
-        <div className="mt-16 w-full pb-6 md:pb-8">
+        <motion.div
+          className="mt-16 w-full pb-6 md:pb-8"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-0">
             <p className="mb-4 text-sm font-medium tracking-[0.2em] text-neutral-300 uppercase md:mb-5">
               Powered by
@@ -92,7 +102,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <style jsx>{`

@@ -12,7 +12,7 @@ const ServiceCard = ({ href, title, description, image }: ServiceCardProps) => {
   return (
     <Link
       href={href}
-      className="group bg-primary-dark relative col-span-2 block h-90 w-auto overflow-hidden rounded-lg border border-white/10 px-6 py-8 text-neutral-300 sm:h-110"
+      className="group bg-primary-dark relative block h-90 w-auto overflow-hidden rounded-lg border border-white/10 px-6 py-8 text-neutral-300 sm:h-110"
     >
       <div className="flex h-72 flex-col justify-between sm:h-90">
         {/* card content */}
