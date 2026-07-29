@@ -61,7 +61,7 @@ const page = () => {
       <SubHero
         title="About VR Wealth Creation"
         description="A brief insight into our journey, values, and mission - learn more about who we are and what drives us."
-        image="/images/office.jpeg"
+        image="/images/about/office.jpeg"
       />
 
       {/* STARTING CARDS */}

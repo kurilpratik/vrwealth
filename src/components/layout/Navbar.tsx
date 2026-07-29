@@ -98,7 +98,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 bg-white/95 shadow-sm shadow-slate-200 backdrop-blur-md transition-transform duration-300 ease-out ${
+      className={`fixed top-0 right-0 left-0 z-50 bg-white shadow-sm transition-transform duration-300 ease-out ${
         isNavbarVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

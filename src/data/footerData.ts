@@ -1,27 +1,27 @@
 export const services = [
   {
     name: "Financial Planning",
-    href: "/service",
+    href: "/financial-planning",
   },
   {
     name: "Investment Advisory",
-    href: "/service",
+    href: "/investment-advisory",
   },
   {
     name: "Wealth Management",
-    href: "/service",
+    href: "/wealth-management",
   },
   {
     name: "Retirement Planning",
-    href: "/service",
+    href: "/retirement-planning",
   },
   {
     name: "Insurance Planning",
-    href: "/service",
+    href: "/insurance-planning",
   },
   {
     name: "Tax Planning",
-    href: "/service",
+    href: "/tax-planning",
   },
 ];
 
@@ -30,3 +30,14 @@ export const contact = [
   { label: "Facebook", href: "https://facebook.com" },
   { label: "Book Consultation", href: "/contact" },
 ];
+
+export const phoneNumbers = [
+  { label: "+91-7987781025", href: "tel:+917987781025" },
+  { label: "+91-9935501980", href: "tel:+919935501980" },
+];
+
+export const noidaOffice = {
+  label: "Noida Office",
+  address:
+    "20th Floor, Galaxy blue sapphire plaza, Extension, Greater Noida W Rd, Sector 4, Noida, Uttar Pradesh 201309",
+};

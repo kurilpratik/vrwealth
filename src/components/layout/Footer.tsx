@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Newsletter from "./Newsletter";
 
-import { services, contact } from "@/src/data/footerData";
+import {
+  services,
+  contact,
+  phoneNumbers,
+  noidaOffice,
+} from "@/src/data/footerData";
 import Logo from "../Logo";
-import Future from "../sections/Future";
 
 const Footer = () => {
   return (
@@ -36,6 +40,31 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+
+            {/* Phone & Office Column  */}
+            <div className="sm:max-w-48">
+              <h3 className="mb-4 text-sm font-semibold text-white">Phone</h3>
+              <ul className="mb-6 flex flex-col gap-2">
+                {phoneNumbers.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      className="text-xs text-gray-400 transition-colors hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="mb-4 text-sm font-semibold text-white">
+                {noidaOffice.label}
+              </h3>
+              <p className="text-xs leading-relaxed text-gray-400">
+                {noidaOffice.address}
+              </p>
+            </div>
+
             {/* Contact Column  */}
             <div>
               <h3 className="mb-4 text-sm font-semibold text-white">Contact</h3>
