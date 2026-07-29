@@ -1,16 +1,15 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import { testimonials, figures, clientele } from "@/src/data/testimonialData";
+import { testimonials, clientele } from "@/src/data/testimonialData";
 import Figures from "../../layout/Figures";
+import ClienteleCard from "../../layout/ClienteleCard";
 
 const TestimonialSection = () => {
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const figuresRef = useRef<HTMLDivElement | null>(null);
-  const [figuresVisible, setFiguresVisible] = useState(false);
 
   // Slider Animation
 
@@ -34,28 +33,6 @@ const TestimonialSection = () => {
   const goTo = (i: number) => {
     setIndex(i % testimonials.length);
   };
-
-  // Figures in presence
-
-  useEffect(() => {
-    const el = figuresRef.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setFiguresVisible(true);
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.25 },
-    );
-
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
 
   return (
     <section>
@@ -137,35 +114,17 @@ const TestimonialSection = () => {
         </div> */}
       </div>
 
-      {/* FIGURES  */}
       <Figures />
-
-      {/* Clientele  */}
 
       <div className="clientele w-full py-6">
         <div className="flex flex-col gap-4 px-4 sm:flex-row sm:gap-8 sm:px-0">
-          {clientele.map((clientele, i) => (
-            <div
+          {clientele.map((item, i) => (
+            <ClienteleCard
               key={i}
-              className="group relative h-72 w-full overflow-hidden sm:h-96"
-            >
-              <Image
-                src={clientele.image}
-                alt={clientele.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-
-              <div className="bg-primary-dark absolute right-0 bottom-5 left-5 w-[90%] px-5 py-5 text-white sm:bottom-10">
-                <h3 className="mb-2 text-base font-semibold">
-                  {clientele.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-neutral-400">
-                  {clientele.description}
-                </p>
-              </div>
-            </div>
+              title={item.title}
+              description={item.description}
+              image={item.image}
+            />
           ))}
         </div>
       </div>

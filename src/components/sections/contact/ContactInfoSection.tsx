@@ -1,0 +1,55 @@
+import Image from "next/image";
+
+const ContactInfoSection = () => {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-4 pb-24 sm:max-w-md sm:pb-42">
+      <div className="rounded-xl bg-[#f2f2f2] px-7 py-8 sm:px-8 sm:py-9">
+        <div>
+          <span className="mb-2 block text-xs font-bold tracking-[0.08em] text-black uppercase">
+            Email
+          </span>
+          <a
+            href="mailto:varnika@vrwealth.net"
+            className="hover:text-primary text-base text-neutral-800 transition sm:text-lg"
+          >
+            varnika@
+            <span className="text-primary">vrwealth</span>
+            .net
+          </a>
+        </div>
+
+        <div className="mt-8">
+          <span className="mb-2 block text-xs font-bold tracking-[0.08em] text-black uppercase">
+            Phone
+          </span>
+          <div className="flex flex-col gap-1 text-base text-neutral-800 sm:text-lg">
+            <a
+              href="tel:+917987781025"
+              className="hover:text-primary transition"
+            >
+              +91-7987781025
+            </a>
+            <a
+              href="tel:+919935501980"
+              className="hover:text-primary transition"
+            >
+              +91-9935501980
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl">
+        <Image
+          src="/images/about/gallery/5.png"
+          alt="Planning session at VR Wealth Creation"
+          fill
+          sizes="(max-width: 768px) 100vw, 400px"
+          className="object-cover"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default ContactInfoSection;

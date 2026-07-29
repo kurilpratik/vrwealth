@@ -5,7 +5,7 @@ type FutureProps = {
   imageUrl?: string;
 };
 
-const Future = ({ imageUrl = "/images/future.jpg" }: FutureProps) => {
+const Future = ({ imageUrl = "/images/future/1.jpg" }: FutureProps) => {
   return (
     <section className="mx-auto sm:pl-6">
       <div className="grid items-center gap-12 md:grid-cols-2">
@@ -26,7 +26,7 @@ const Future = ({ imageUrl = "/images/future.jpg" }: FutureProps) => {
           </div>
         </div>
         {/* Right: Image */}
-        <div className="relative h-140 w-full overflow-hidden sm:h-full">
+        <div className="relative h-84 w-full overflow-hidden sm:h-full">
           <Image
             src={imageUrl}
             alt="Financial consultant overlooking the city"

@@ -4,6 +4,7 @@ import ArticleCard from "@/src/components/layout/ArticleCard";
 import SubHero from "@/src/components/layout/SubHero";
 import FounderSection from "@/src/components/sections/about/FounderSection";
 import TeamSection from "@/src/components/sections/about/TeamSection";
+import Future from "@/src/components/sections/Future";
 
 const articles = [
   {
@@ -166,6 +167,7 @@ const page = () => {
           />
         </div>
       </div>
+      <Future imageUrl="/images/future/2.jpg" />
     </div>
   );
 };

@@ -8,7 +8,6 @@ import Future from "../sections/Future";
 const Footer = () => {
   return (
     <footer>
-      <Future />
       <Newsletter />
       {/* FOOTER  */}
       <div className="bg-[#0f0e1a] px-6 py-14 md:px-16">
