@@ -10,6 +10,8 @@ const fieldClassName =
 const labelClassName =
   "absolute top-3 left-4 text-[11px] font-medium tracking-[0.18em] text-slate-400 uppercase";
 
+const WEB3FORMS_ACCESS_KEY = "ad5a24d1-ab0e-4991-93a9-19e28ef69a0d";
+
 const ContactForm = () => {
   const [submissionState, setSubmissionState] = useState<
     "idle" | "submitting" | "success" | "error"
@@ -35,19 +37,16 @@ const ContactForm = () => {
 
     setSubmissionState("submitting");
 
-    const encodedFormData = new URLSearchParams();
-    new FormData(e.currentTarget).forEach((value, key) => {
-      encodedFormData.append(key, value.toString());
-    });
-
     try {
-      const response = await fetch("/", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodedFormData.toString(),
+        body: new FormData(e.currentTarget),
       });
+      const result = await response.json();
 
-      if (!response.ok) throw new Error("Unable to submit the form");
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to submit the form");
+      }
 
       setFormData({
         firstName: "",
@@ -74,20 +73,22 @@ const ContactForm = () => {
 
         <ScrollReveal delay={0.1}>
           <form
-            name="contact"
+            action="https://api.web3forms.com/submit"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="ring-primary/40 bg-primary-dark rounded-xl border border-white/10 p-6 shadow-[0_40px_120px_rgba(15,23,42,0.35)] ring-1 sm:p-8 md:p-10"
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <p className="absolute -m-px h-px w-px overflow-hidden border-0 p-0 [clip:rect(0,0,0,0)]">
-              <label>
-                Don&apos;t fill this out if you&apos;re human:
-                <input name="bot-field" tabIndex={-1} autoComplete="off" />
-              </label>
-            </p>
+            <input
+              type="hidden"
+              name="access_key"
+              value={WEB3FORMS_ACCESS_KEY}
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="VR Wealth Creation Contact Form"
+            />
+            <input type="checkbox" name="botcheck" className="hidden" />
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="relative">
                 <label htmlFor="firstName" className={labelClassName}>
