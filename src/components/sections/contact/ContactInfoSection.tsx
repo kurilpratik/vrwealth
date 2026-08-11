@@ -30,16 +30,16 @@ const ContactInfoSection = () => {
           </span>
           <div className="flex flex-col gap-1 text-base text-neutral-800 sm:text-lg">
             <a
-              href="tel:+917987781025"
+              href="tel:+91-6388249982"
               className="hover:text-primary transition"
             >
-              +91-7987781025
+              +91-6388249982
             </a>
             <a
-              href="tel:+919935501980"
+              href="tel:+91-8796774425"
               className="hover:text-primary transition"
             >
-              +91-9935501980
+              +91-8796774425
             </a>
           </div>
         </div>
