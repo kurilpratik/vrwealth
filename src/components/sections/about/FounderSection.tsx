@@ -1,10 +1,19 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 import ScrollReveal from "../../ui/ScrollReveal";
 
 const FounderSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
-    <section className="mx-auto max-w-7xl px-4 py-24 sm:px-0">
+    <section
+      id="our-founder"
+      className="mx-auto max-w-7xl scroll-mt-24 px-4 py-24 sm:px-0"
+    >
       <ScrollReveal className="mb-12 text-center lg:mb-16">
         <p className="small-heading text-primary mx-auto">Our Founder</p>
         <h2 className="heading text-3xl font-semibold sm:text-4xl lg:text-5xl">
@@ -31,7 +40,7 @@ const FounderSection = () => {
           />
           <p className="small-heading mt-4 text-sm">About Varnika Tiwaris</p>
           <p className="mt-4 text-xl font-semibold">
-            7 years of experience in investing & wealth management
+            10+ years of experience in investing & wealth management
           </p>
         </ScrollReveal>
 
@@ -40,9 +49,14 @@ const FounderSection = () => {
           delay={0.1}
           amount={0.15}
         >
-          <div className="text-primary absolute top-6 right-6 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg">
-            <span className="text-3xl font-black">+</span>
-          </div>
+          <button
+            type="button"
+            aria-label="Play founder introduction video"
+            onClick={() => setIsVideoOpen(true)}
+            className="text-primary absolute top-6 right-6 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-200 before:absolute before:inset-0 before:animate-ping before:rounded-full before:bg-white/70 motion-reduce:before:animate-none hover:scale-105 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+          >
+            <span className="relative text-3xl font-black">+</span>
+          </button>
           <div className="aspect-4/5 sm:aspect-3/4 lg:aspect-5/6">
             <Image
               src="/images/about/varnika.png"
@@ -124,6 +138,50 @@ const FounderSection = () => {
           </p>
         </ScrollReveal>
       </div>
+
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Founder introduction video"
+            onClick={() => setIsVideoOpen(false)}
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+          >
+            <motion.div
+              className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.985, filter: "blur(12px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              exit={{ opacity: 0, scale: 0.99, filter: "blur(6px)" }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <button
+                type="button"
+                aria-label="Close video"
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-3 right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/65 text-2xl leading-none text-white transition-colors hover:bg-black focus-visible:ring-2 focus-visible:ring-white"
+              >
+                ×
+              </button>
+              <video
+                className="block max-h-[85vh] w-full"
+                controls
+                autoPlay
+                muted
+                playsInline
+              >
+                <source src="/videos/vv.MP4" type="video/mp4" />
+                Your browser does not support video playback.
+              </video>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

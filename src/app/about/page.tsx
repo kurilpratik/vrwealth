@@ -80,40 +80,45 @@ const page = () => {
         </div>
       </section>
       {/* About Us */}
-      <ScrollReveal
-        as="section"
-        className="mx-auto px-4 py-24 sm:max-w-2xl sm:py-42"
-      >
-        <h3 className="heading">
-          We are <span className="text-primary font-black">VR</span>
-          <span className="font-bold italic">Wealth </span>
-          Creation and <br /> this is our story
-        </h3>
-        <p className="mt-12 ml-12 text-sm leading-5 sm:ml-24 sm:max-w-[70%] sm:text-base sm:leading-7">
-          VR Wealth Creations, established in 2022, is a seasoned Indian stock
-          market investment organization. Since its inception, it has built an
-          impressive portfolio focused on emerging sectors such as renewable
-          energy, derivatives, futures, options, ETFs, and crude oil.
-          <br />
-          <br />
-          With a disciplined value investing approach inspired by Warren
-          Buffett, we have consistently achieved returns that surpass the NIFTY
-          50 index annually. Despite market volatility, our strategy of thorough
-          fundamental analysis and a long-term investment horizon has enabled us
-          to identify several multi-bagger stocks in the small and mid-cap
-          segments.
-          <br />
-          <br />
-          Additionally, we have successfully navigated opportunities in
-          derivatives, futures, options, and exchange-traded funds (ETFs), which
-          derive their value from underlying assets such as stocks, commodities,
-          or           currencies.
-        </p>
-      </ScrollReveal>
+      <div id="about-vr-wealth" className="scroll-mt-24">
+        <ScrollReveal
+          as="section"
+          className="mx-auto px-4 py-24 sm:max-w-2xl sm:py-42"
+        >
+          <h3 className="heading">
+            We are <span className="text-primary font-black">VR</span>
+            <span className="font-bold italic">Wealth </span>
+            Creation and <br /> this is our story
+          </h3>
+          <p className="mt-12 ml-12 text-sm leading-5 sm:ml-24 sm:max-w-[70%] sm:text-base sm:leading-7">
+            VR Wealth Creations, established in 2022, is a seasoned Indian stock
+            market investment organization. Since its inception, it has built an
+            impressive portfolio focused on emerging sectors such as renewable
+            energy, derivatives, futures, options, ETFs, and crude oil.
+            <br />
+            <br />
+            With a disciplined value investing approach inspired by Warren
+            Buffett, we have consistently achieved returns that surpass the
+            NIFTY 50 index annually. Despite market volatility, our strategy of
+            thorough fundamental analysis and a long-term investment horizon has
+            enabled us to identify several multi-bagger stocks in the small and
+            mid-cap segments.
+            <br />
+            <br />
+            Additionally, we have successfully navigated opportunities in
+            derivatives, futures, options, and exchange-traded funds (ETFs),
+            which derive their value from underlying assets such as stocks,
+            commodities, or currencies.
+          </p>
+        </ScrollReveal>
+      </div>
       <FounderSection />
       <TeamSection />
       {/* CLIENT  */}
-      <section className="mx-auto px-4 sm:max-w-7xl sm:px-0">
+      <section
+        id="our-client"
+        className="mx-auto scroll-mt-24 px-4 sm:max-w-7xl sm:px-0"
+      >
         <ScrollReveal>
           <h3 className="heading text-center">
             Our Client Base is Across

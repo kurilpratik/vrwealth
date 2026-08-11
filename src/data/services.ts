@@ -172,46 +172,41 @@ export const Services: Service[] = [
       "Tax-efficient fund and instrument selection",
       "Coordination with your existing CA or tax advisor",
     ],
-    tags: [
-      "tax planning",
-      "capital gains",
-      "tax efficiency",
-      "Section 80C",
-    ],
+    tags: ["tax planning", "capital gains", "tax efficiency", "Section 80C"],
   },
-  {
-    slug: "insurance-planning",
-    title: "Insurance Planning",
-    description:
-      "Right-sized life and health cover that protects your family without overpaying.",
-    tagline:
-      "Protect what matters most — with coverage that fits your needs, not an agent's commission.",
-    metaTitle: "Insurance Planning Services | VR Wealth Creation",
-    metaDescription:
-      "Unbiased insurance planning for life and health cover. VR Wealth Creation helps you choose adequate protection without unnecessary premiums or product overlap.",
-    category: "Protection",
-    image: "/images/services/s6.jpg",
-    href: "/insurance-planning",
-    content: [
-      "Insurance exists to protect your financial plan from events you cannot predict. But the wrong policy — or too many of them — can erode returns without adding real security.",
-      "We assess your existing coverage, family dependencies, liabilities, and income replacement needs to determine how much protection you actually require. Our recommendations favour term life and comprehensive health policies over investment-linked products that combine high costs with opaque returns.",
-      "For families, we ensure breadwinners have adequate term cover and dependents have health insurance that matches their medical profile and budget. For business owners, we evaluate key-person and partnership continuity needs.",
-      "Because we are not tied to any insurer, our advice is unbiased. We compare features, exclusions, claim ratios, and premiums — then recommend policies that deliver value, not just sales targets.",
-      "Insurance planning at VR Wealth Creation is one piece of a larger strategy. Protection and growth work together so that neither your family nor your corpus is left exposed.",
-    ],
-    highlights: [
-      "Needs-based life and health cover analysis",
-      "Unbiased, insurer-agnostic recommendations",
-      "Term insurance over costly bundled products",
-      "Review of existing policies for gaps and overlap",
-    ],
-    tags: [
-      "insurance planning",
-      "term insurance",
-      "health insurance",
-      "family protection",
-    ],
-  },
+  // {
+  //   slug: "insurance-planning",
+  //   title: "Insurance Planning",
+  //   description:
+  //     "Right-sized life and health cover that protects your family without overpaying.",
+  //   tagline:
+  //     "Protect what matters most — with coverage that fits your needs, not an agent's commission.",
+  //   metaTitle: "Insurance Planning Services | VR Wealth Creation",
+  //   metaDescription:
+  //     "Unbiased insurance planning for life and health cover. VR Wealth Creation helps you choose adequate protection without unnecessary premiums or product overlap.",
+  //   category: "Protection",
+  //   image: "/images/services/s6.jpg",
+  //   href: "/insurance-planning",
+  //   content: [
+  //     "Insurance exists to protect your financial plan from events you cannot predict. But the wrong policy — or too many of them — can erode returns without adding real security.",
+  //     "We assess your existing coverage, family dependencies, liabilities, and income replacement needs to determine how much protection you actually require. Our recommendations favour term life and comprehensive health policies over investment-linked products that combine high costs with opaque returns.",
+  //     "For families, we ensure breadwinners have adequate term cover and dependents have health insurance that matches their medical profile and budget. For business owners, we evaluate key-person and partnership continuity needs.",
+  //     "Because we are not tied to any insurer, our advice is unbiased. We compare features, exclusions, claim ratios, and premiums — then recommend policies that deliver value, not just sales targets.",
+  //     "Insurance planning at VR Wealth Creation is one piece of a larger strategy. Protection and growth work together so that neither your family nor your corpus is left exposed.",
+  //   ],
+  //   highlights: [
+  //     "Needs-based life and health cover analysis",
+  //     "Unbiased, insurer-agnostic recommendations",
+  //     "Term insurance over costly bundled products",
+  //     "Review of existing policies for gaps and overlap",
+  //   ],
+  //   tags: [
+  //     "insurance planning",
+  //     "term insurance",
+  //     "health insurance",
+  //     "family protection",
+  //   ],
+  // },
 ];
 
 export const getServiceBySlug = (slug: string) =>

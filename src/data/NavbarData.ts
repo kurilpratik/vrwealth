@@ -8,7 +8,7 @@ export const NavbarData = [
     href: "/#services",
   },
   {
-    title: "About Us",
+    title: "About",
     href: "/about",
   },
   {

@@ -7,6 +7,8 @@ import {
   phoneNumbers,
   noidaOffice,
 } from "@/src/data/footerData";
+
+import { NavbarData } from "@/src/data/NavbarData";
 import Logo from "../Logo";
 
 const Footer = () => {
@@ -21,65 +23,90 @@ const Footer = () => {
             <Logo mode="dark" />
           </div>
 
-          {/* Link columns */}
+          {/* Links column */}
           <div className="flex flex-col gap-12 sm:flex-row md:gap-20">
             <div>
-              <h3 className="mb-4 text-sm font-semibold text-white">
-                Services
-              </h3>
+              <h3 className="mb-4 text-sm font-semibold text-white">Pages</h3>
               <ul className="flex flex-col gap-3">
-                {services.map((item) => (
-                  <li key={item.name}>
+                {NavbarData.map((item) => (
+                  <li key={item.title}>
                     <Link
                       href={item.href}
                       className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
                     >
-                      {item.name}
+                      {item.title}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Phone & Office Column  */}
-            <div className="sm:max-w-48">
-              <h3 className="mb-4 text-sm font-semibold text-white">Phone</h3>
-              <ul className="mb-6 flex flex-col gap-2">
-                {phoneNumbers.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      className="text-xs text-gray-400 transition-colors hover:text-white"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            {/* Services column */}
+            <div className="flex flex-col gap-12 sm:flex-row md:gap-20">
+              <div>
+                <h3 className="mb-4 text-sm font-semibold text-white">
+                  Services
+                </h3>
+                <ul className="flex flex-col gap-3">
+                  {services.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <h3 className="mb-4 text-sm font-semibold text-white">
-                {noidaOffice.label}
-              </h3>
-              <p className="text-xs leading-relaxed text-gray-400">
-                {noidaOffice.address}
-              </p>
-            </div>
+              {/* Phone & Office Column  */}
+              <div className="sm:max-w-48">
+                <h3 className="mb-4 text-sm font-semibold text-white">Phone</h3>
+                <ul className="mb-6 flex flex-col gap-2">
+                  {phoneNumbers.map((item) => (
+                    <li key={item.label}>
+                      <a
+                        href={item.href}
+                        className="text-xs text-gray-400 transition-colors hover:text-white"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
 
-            {/* Contact Column  */}
-            <div>
-              <h3 className="mb-4 text-sm font-semibold text-white">Contact</h3>
-              <ul className="flex flex-col gap-3">
-                {contact.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                <h3 className="mb-4 text-sm font-semibold text-white">
+                  {noidaOffice.label}
+                </h3>
+                <p className="mb-2 text-xs leading-relaxed font-semibold text-gray-400">
+                  {noidaOffice.time}
+                </p>
+                <p className="text-xs leading-relaxed text-gray-400">
+                  {noidaOffice.address}
+                </p>
+              </div>
+
+              {/* Contact Column  */}
+              <div>
+                <h3 className="mb-4 text-sm font-semibold text-white">
+                  Contact
+                </h3>
+                <ul className="flex flex-col gap-3">
+                  {contact.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        target="_blank"
+                        className="text-xs tracking-wide text-gray-400 uppercase transition-colors hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

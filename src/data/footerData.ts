@@ -16,10 +16,6 @@ export const services = [
     href: "/retirement-planning",
   },
   {
-    name: "Insurance Planning",
-    href: "/insurance-planning",
-  },
-  {
     name: "Tax Planning",
     href: "/tax-planning",
   },
@@ -27,17 +23,18 @@ export const services = [
 
 export const contact = [
   { label: "Email", href: "mailto:varnika@vrwealth.com" },
-  { label: "Facebook", href: "https://facebook.com" },
+  { label: "Instagram", href: "https://instagram.com/stockbroker_26" },
   { label: "Book Consultation", href: "/contact" },
 ];
 
 export const phoneNumbers = [
-  { label: "+91-7987781025", href: "tel:+917987781025" },
-  { label: "+91-9935501980", href: "tel:+919935501980" },
+  { label: "+91-6388249982", href: "tel:+916388249982" },
+  { label: "+91-8796774425", href: "tel:+918796774425" },
 ];
 
 export const noidaOffice = {
-  label: "Noida Office",
+  label: "Head Office (Noida)",
   address:
     "20th Floor, Galaxy blue sapphire plaza, Extension, Greater Noida W Rd, Sector 4, Noida, Uttar Pradesh 201309",
+  time: "10:30 AM to 6:00 PM",
 };
